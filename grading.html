@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>okiki Grading System</title>
+    <link rel="stylesheet" href="sty.css">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body">
+    <section id="section">
+        <divi style="background-color: blue;">
+            <h1 class="px-3 py-4">okiki GRADING SYSTEM</h1 >
+        </div>
+        <div id="data">
+            <input type="number" id="scoreValue" placeholder="Enter Your Score">
+            <div id="show"></div>
+        </div>
+        <div> <button onclick="checkScore()" class="btn btn-outline-warning my-4 rounded-pill">Check score</button>
+        </div>
+    </section>
+
+    <script>
+        var maxScore = 100
+        function checkScore() {
+            var myScore = Number(scoreValue.value)
+            if (myScore >= 70 && myScore <= 100) {
+                show.innerHTML = ("Excellent")
+                
+            }
+
+            else if (myScore >= 60 && myScore <= 69) {
+                show.innerHTML = ("Good Results")
+            }
+
+            else if (myScore >= 50 && myScore <= 59) {
+                show.innerHTML = ("Pass")
+            }
+
+            else if (myScore >= 45 && myScore <= 49) {
+                show.innerHTML = ("put More Effort")
+            }
+
+            else if (myScore >= 35 && myScore <= 44) {
+                show.innerHTML = ("fail")
+            }
+
+            else if (myScore >= 1 && myScore <= 34) {
+                show.innerHTML = ("You are a failure")
+            }
+            else if (myScore == "") {
+                show.innerHTML = (" input your score ")
+                //   show.style.backgroundColor = "red"
+            }
+            else {
+                show.innerHTML = ("invalid score, try again and see if you no go commot this school ")
+            }
+
+        }
+    </script>
+    </body>
+
+</html>
